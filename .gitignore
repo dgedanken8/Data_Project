@@ -1,0 +1,66 @@
+# =========================
+# Vivado generated folders
+# =========================
+
+**/*.cache/
+**/*.hw/
+**/*.runs/
+**/*.sim/
+**/*.gen/
+**/*.ip_user_files/
+**/ip_user_files/
+**/xsim.dir/
+**/.Xil/
+
+# =========================
+# Vivado generated files
+# =========================
+
+*.jou
+*.log
+*.str
+*.wdf
+*.wdb
+*.pb
+*.backup
+*.tmp
+
+# =========================
+# Vivado waveform configuration
+# =========================
+
+*.wcfg
+
+# =========================
+# Avoid duplicated Verilog sources copied into Vivado project
+# The real source files should stay in rtl/ and tb/
+# =========================
+
+vivado/**/Data_Project.srcs/sources_1/new/*.v
+vivado/**/Data_Project.srcs/sim_1/new/*.v
+
+# =========================
+# Ignore accidental nested Vivado project folder
+# =========================
+
+vivado/Data_Project/Data_Project/
+
+# =========================
+# Webtalk / usage files
+# =========================
+
+*webtalk*
+usage_statistics_webtalk.*
+
+# =========================
+# Windows files
+# =========================
+
+Thumbs.db
+desktop.ini
+
+# =========================
+# VS Code settings
+# =========================
+
+.vscode/
