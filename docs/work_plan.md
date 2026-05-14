@@ -20,7 +20,7 @@ Zybo Z7-20 DDR Data Logger work plan
 
 **Expected Deliverable:** Verified rtl/data_generator.v, tb/tb_data_generator.v, waveform screenshot, simulation report, commit and push.
 
-## Stage 3 — Packet Builder FSM + Testbench
+## Stage 3 — Packet Builder FSM + Testbench — Done
 
 **Goal:** Build an FSM that wraps generated data into a structured packet. This stage introduces real control logic using states.
 

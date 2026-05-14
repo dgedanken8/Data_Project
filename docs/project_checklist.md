@@ -9,7 +9,7 @@ Progress tracking for the DDR Data Logger project on Zybo Z7-20.
 | 0 | GitHub + Project Structure | ✓ Done | Repository, folders, README, docs, first commit |
 | 1 | Data Protocol | ✓ Done | docs/data_protocol.md with Header, Length, Data, Checksum |
 | 2 | Data Generator + Testbench | ✓ Done | rtl/data_generator.v, tb/tb_data_generator.v, simulation, waveform, report |
-| 3 | Packet Builder FSM + Testbench | □ Pending | packet_builder_fsm.v + testbench + simulation |
+| 3 | Packet Builder FSM + Testbench | ✓ Done | packet_builder_fsm.v + testbench + simulation |
 | 4 | Sync FIFO + Testbench | □ Pending | sync_fifo.v + testbench + simulation |
 | 5 | AXI-Stream Master + Testbench | □ Pending | axis_stream_master.v + testbench + simulation |
 | 6 | Full RTL Top Simulation | □ Pending | data_project_top.v + full testbench + simulation |
@@ -22,7 +22,7 @@ Progress tracking for the DDR Data Logger project on Zybo Z7-20.
 | 13 | UART or SPI Extension | □ Pending | Real data source replacing Data Generator |
 | 14 | Portfolio Polish | □ Pending | GitHub, README, images, explanations, and reports polish |
 
-Current status: Stages 0-2 are complete. The next stage is Stage 3 - Packet Builder FSM + Testbench.
+Current status: Stages 0-3 are complete. The next stage is Stage 4 - Sync FIFO + Testbench.
 
 ---
 
@@ -65,16 +65,16 @@ Current status: Stages 0-2 are complete. The next stage is Stage 3 - Packet Buil
 - ☑ Completed commit
 - ☑ Completed push
 
-### Stage 3 - Packet Builder FSM + Testbench - □ Pending
+### Stage 3 - Packet Builder FSM + Testbench - ✓ Done
 
-- ☐ Define block goal
-- ☐ Define FSM states
-- ☐ Write rtl/packet_builder_fsm.v
-- ☐ Write tb/tb_packet_builder_fsm.v
-- ☐ Run simulation
-- ☐ Verify Header / Length / Data / Checksum
-- ☐ Complete commit
-- ☐ Complete push
+- ☑ Define block goal
+- ☑ Define FSM states
+- ☑ Write rtl/packet_builder_fsm.v
+- ☑ Write tb/tb_packet_builder_fsm.v
+- ☑ Run simulation
+- ☑ Verify Header / Length / Data / Checksum
+- ☑ Complete commit
+- ☑ Complete push
 
 ### Stage 4 - Sync FIFO + Testbench - □ Pending
 
