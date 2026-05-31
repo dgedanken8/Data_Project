@@ -26,7 +26,7 @@ Zybo Z7-20 DDR Data Logger work plan
 
 **Expected Deliverable:** packet_builder_fsm.v, testbench and simulation for Header, Length, Data and Checksum.
 
-## Stage 4 — Sync FIFO + Testbench
+## Stage 4 — Sync FIFO + Testbench — Done
 
 **Goal:** Add a synchronous FIFO to buffer data between blocks working on the same clock.
 

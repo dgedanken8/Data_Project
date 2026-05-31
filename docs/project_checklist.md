@@ -10,7 +10,7 @@ Progress tracking for the DDR Data Logger project on Zybo Z7-20.
 | 1 | Data Protocol | ✓ Done | docs/data_protocol.md with Header, Length, Data, Checksum |
 | 2 | Data Generator + Testbench | ✓ Done | rtl/data_generator.v, tb/tb_data_generator.v, simulation, waveform, report |
 | 3 | Packet Builder FSM + Testbench | ✓ Done | packet_builder_fsm.v + testbench + simulation |
-| 4 | Sync FIFO + Testbench | □ Pending | sync_fifo.v + testbench + simulation |
+| 4 | Sync FIFO + Testbench | ✓ Done | sync_fifo.v + testbench + simulation |
 | 5 | AXI-Stream Master + Testbench | □ Pending | axis_stream_master.v + testbench + simulation |
 | 6 | Full RTL Top Simulation | □ Pending | data_project_top.v + full testbench + simulation |
 | 7 | Vivado Block Design + AXI DMA + DDR | □ Pending | Connected Block Design ready to run |
@@ -22,7 +22,7 @@ Progress tracking for the DDR Data Logger project on Zybo Z7-20.
 | 13 | UART or SPI Extension | □ Pending | Real data source replacing Data Generator |
 | 14 | Portfolio Polish | □ Pending | GitHub, README, images, explanations, and reports polish |
 
-Current status: Stages 0-3 are complete. The next stage is Stage 4 - Sync FIFO + Testbench.
+Current status: Stages 0-4 are complete. The next stage is Stage 5 - AXI-Stream Master + Testbench.
 
 ---
 
@@ -76,16 +76,16 @@ Current status: Stages 0-3 are complete. The next stage is Stage 4 - Sync FIFO +
 - ☑ Complete commit
 - ☑ Complete push
 
-### Stage 4 - Sync FIFO + Testbench - □ Pending
+### Stage 4 - Sync FIFO + Testbench - ✓ Done
 
-- ☐ Define block goal
-- ☐ Write rtl/sync_fifo.v
-- ☐ Write tb/tb_sync_fifo.v
-- ☐ Verify write/read
-- ☐ Verify full/empty
-- ☐ Verify overflow/underflow
-- ☐ Complete commit
-- ☐ Complete push
+- ☑ Define block goal
+- ☑ Write rtl/sync_fifo.v
+- ☑ Write tb/tb_sync_fifo.v
+- ☑ Verify write/read
+- ☑ Verify full/empty
+- ☑ Verify overflow/underflow
+- ☑ Complete commit
+- ☑ Complete push
 
 ### Stage 5 - AXI-Stream Master + Testbench - □ Pending
 
