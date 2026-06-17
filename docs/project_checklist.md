@@ -11,7 +11,7 @@ Progress tracking for the DDR Data Logger project on Zybo Z7-20.
 | 2 | Data Generator + Testbench | ✓ Done | rtl/data_generator.v, tb/tb_data_generator.v, simulation, waveform, report |
 | 3 | Packet Builder FSM + Testbench | ✓ Done | packet_builder_fsm.v + testbench + simulation |
 | 4 | Sync FIFO + Testbench | ✓ Done | sync_fifo.v + testbench + simulation |
-| 5 | AXI-Stream Master + Testbench | □ Pending | axis_stream_master.v + testbench + simulation |
+| 5 | AXI-Stream Master + Testbench | ✓ Done | axis_stream_master.v + testbench + simulation |
 | 6 | Full RTL Top Simulation | □ Pending | data_project_top.v + full testbench + simulation |
 | 7 | Vivado Block Design + AXI DMA + DDR | □ Pending | Connected Block Design ready to run |
 | 8 | Vitis C Verification | □ Pending | C software that starts DMA and verifies DDR data |
@@ -22,7 +22,7 @@ Progress tracking for the DDR Data Logger project on Zybo Z7-20.
 | 13 | UART or SPI Extension | □ Pending | Real data source replacing Data Generator |
 | 14 | Portfolio Polish | □ Pending | GitHub, README, images, explanations, and reports polish |
 
-Current status: Stages 0-4 are complete. The next stage is Stage 5 - AXI-Stream Master + Testbench.
+Current status: Stages 0-5 are complete. The next stage is Stage 6 - Full RTL Top Simulation.
 
 ---
 
@@ -87,15 +87,15 @@ Current status: Stages 0-4 are complete. The next stage is Stage 5 - AXI-Stream 
 - ☑ Complete commit
 - ☑ Complete push
 
-### Stage 5 - AXI-Stream Master + Testbench - □ Pending
+### Stage 5 - AXI-Stream Master + Testbench - ✓ Done
 
-- ☐ Define block goal
-- ☐ Write rtl/axis_stream_master.v
-- ☐ Write tb/tb_axis_stream_master.v
-- ☐ Verify tvalid / tready / tdata / tlast
-- ☐ Verify backpressure
-- ☐ Complete commit
-- ☐ Complete push
+- ☑ Define block goal
+- ☑ Write rtl/axis_stream_master.v
+- ☑ Write tb/tb_axis_stream_master.v
+- ☑ Verify tvalid / tready / tdata / tlast
+- ☑ Verify backpressure
+- ☑ Complete commit
+- ☑ Complete push
 
 ### Stage 6 - Full RTL Top Simulation - □ Pending
 

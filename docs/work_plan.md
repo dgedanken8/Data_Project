@@ -32,7 +32,7 @@ Zybo Z7-20 DDR Data Logger work plan
 
 **Expected Deliverable:** sync_fifo.v, testbench and checks for write/read, full/empty, overflow and underflow.
 
-## Stage 5 — AXI-Stream Master + Testbench
+## Stage 5 — AXI-Stream Master + Testbench — Done
 
 **Goal:** Convert internal data into an AXI-Stream style interface using valid/ready behavior.
 
