@@ -110,7 +110,8 @@ Main RTL blocks include:
 - Sync FIFO
 - AXI-Stream Master
 - Async FIFO / CDC
-- Top-level integration module
+- Full RTL Integration Testbench
+- Separate custom IP blocks for Vivado Block Design
 
 ---
 
@@ -131,6 +132,8 @@ This makes the data easier to verify in simulation, DDR memory, and software.
 ### 3. Testbench-Based Verification
 
 Each RTL block is verified separately before being connected to the next block.
+
+After the individual block simulations, the verified blocks are connected in a full RTL integration testbench. This confirms the complete path from Data Generator through Packet Builder FSM, Sync FIFO and AXI-Stream Master before moving to IP packaging and Vivado Block Design.
 
 This helps isolate bugs and follows a professional FPGA development flow.
 
@@ -223,8 +226,8 @@ The project is developed according to the following stages:
 | 3 | Packet Builder FSM + Testbench |
 | 4 | Sync FIFO + Testbench |
 | 5 | AXI-Stream Master + Testbench |
-| 6 | Full RTL Top Simulation |
-| 7 | Vivado Block Design + AXI DMA + DDR |
+| 6 | Full RTL Integration Simulation |
+| 7 | Custom IP Packaging + Vivado Block Design |
 | 8 | Vitis C Verification |
 | 9 | Async FIFO + CDC + Testbench |
 | 10 | Full Integration with CDC + DMA + DDR |
@@ -234,6 +237,8 @@ The project is developed according to the following stages:
 | 14 | Portfolio Polish |
 
 For progress tracking, see the project checklist in the documentation folder.
+
+Current progress: Stages 0-6 are complete. The next stage is Stage 7 - Custom IP Packaging + Vivado Block Design.
 
 ---
 
@@ -258,7 +263,7 @@ Data_Project/
 
 Main documentation files:
 
-- **Work Plan:** `docs/work plan.md`
+- **Work Plan:** `docs/work_plan.md`
 - **Data Protocol:** `docs/data_protocol.md`
 - **Project Checklist:** `docs/project_checklist.md`
 - **Hebrew Checklist PDF:** `docs/Data_Project_Checklist_HE.pdf`
@@ -277,7 +282,7 @@ Each RTL block will be tested separately using a dedicated testbench.
 
 ### Full RTL Simulation
 
-The full custom RTL chain will be simulated before connecting it to AXI DMA and DDR.
+The full custom RTL chain is simulated using an integration testbench before connecting it to Vivado Block Design, AXI DMA and DDR.
 
 ### Vivado Hardware Integration
 

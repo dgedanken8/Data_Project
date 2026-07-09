@@ -12,8 +12,8 @@ Progress tracking for the DDR Data Logger project on Zybo Z7-20.
 | 3 | Packet Builder FSM + Testbench | ✓ Done | packet_builder_fsm.v + testbench + simulation |
 | 4 | Sync FIFO + Testbench | ✓ Done | sync_fifo.v + testbench + simulation |
 | 5 | AXI-Stream Master + Testbench | ✓ Done | axis_stream_master.v + testbench + simulation |
-| 6 | Full RTL Top Simulation | □ Pending | data_project_top.v + full testbench + simulation |
-| 7 | Vivado Block Design + AXI DMA + DDR | □ Pending | Connected Block Design ready to run |
+| 6 | Full RTL Integration Simulation | ✓ Done | tb/tb_data_project_integration.v + full RTL integration simulation + waveform + console PASS |
+| 7 | Custom IP Packaging + Vivado Block Design | □ Pending | Separate custom IP blocks and visual Block Design prepared for AXI DMA / DDR |
 | 8 | Vitis C Verification | □ Pending | C software that starts DMA and verifies DDR data |
 | 9 | Async FIFO + CDC + Testbench | □ Pending | async_fifo.v + testbench with two clocks |
 | 10 | Full Integration with CDC + DMA + DDR | □ Pending | Full system with two clock domains and DDR |
@@ -22,7 +22,7 @@ Progress tracking for the DDR Data Logger project on Zybo Z7-20.
 | 13 | UART or SPI Extension | □ Pending | Real data source replacing Data Generator |
 | 14 | Portfolio Polish | □ Pending | GitHub, README, images, explanations, and reports polish |
 
-Current status: Stages 0-5 are complete. The next stage is Stage 6 - Full RTL Top Simulation.
+Current status: Stages 0-6 are complete. The next stage is Stage 7 - Custom IP Packaging + Vivado Block Design.
 
 ---
 
@@ -97,25 +97,29 @@ Current status: Stages 0-5 are complete. The next stage is Stage 6 - Full RTL To
 - ☑ Complete commit
 - ☑ Complete push
 
-### Stage 6 - Full RTL Top Simulation - □ Pending
+### Stage 6 - Full RTL Integration Simulation - ✓ Done
 
-- ☐ Write rtl/data_project_top.v
-- ☐ Write tb/tb_data_project_top.v
-- ☐ Connect all blocks
-- ☐ Run full simulation
-- ☐ Save result
-- ☐ Complete commit
-- ☐ Complete push
+- ☑ Reviewed RTL block interfaces
+- ☑ Added data_ready to packet_builder_FSM
+- ☑ Wrote tb/tb_data_project_integration.v
+- ☑ Connected Data Generator → Packet Builder FSM → Sync FIFO → AXI-Stream Master
+- ☑ Ran full RTL integration simulation
+- ☑ Verified expected AXI packet words
+- ☑ Verified axis_tlast on checksum word
+- ☑ Saved waveform screenshot and console PASS
+- ☑ Complete commit
+- ☑ Complete push
 
-### Stage 7 - Vivado Block Design + AXI DMA + DDR - □ Pending
+### Stage 7 - Custom IP Packaging + Vivado Block Design - □ Pending
 
+- ☐ Package data_generator as IP
+- ☐ Package packet_builder_FSM as IP
+- ☐ Package sync_fifo as IP
+- ☐ Package axi_stream_master as IP
+- ☐ Add custom IP repository
 - ☐ Create Block Design
-- ☐ Add Zynq PS
-- ☐ Add AXI DMA
-- ☐ Add Interconnect / SmartConnect
-- ☐ Connect Custom RTL
-- ☐ Connect DDR
-- ☐ Pass design validate
+- ☐ Connect custom IP blocks visually
+- ☐ Prepare AXI DMA / DDR integration
 - ☐ Complete commit
 - ☐ Complete push
 

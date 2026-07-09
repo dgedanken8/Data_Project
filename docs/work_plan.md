@@ -38,17 +38,17 @@ Zybo Z7-20 DDR Data Logger work plan
 
 **Expected Deliverable:** axis_stream_master.v and testbench with tvalid, tready, tdata, tlast and backpressure checks.
 
-## Stage 6 — Full RTL Top Simulation
+## Stage 6 — Full RTL Integration Simulation — Done
 
-**Goal:** Connect the main RTL blocks together and verify the complete RTL chain in simulation.
+**Goal:** Connect the verified RTL blocks together in an integration testbench and verify the complete RTL chain in simulation, while keeping the blocks separate for later IP packaging.
 
-**Expected Deliverable:** data_project_top.v, full testbench and simulation result.
+**Expected Deliverable:** tb/tb_data_project_integration.v, full RTL integration simulation, waveform screenshot and console PASS showing the complete packet from Data Generator through AXI-Stream Master.
 
-## Stage 7 — Vivado Block Design + AXI DMA + DDR
+## Stage 7 — Custom IP Packaging + Vivado Block Design
 
-**Goal:** Connect the custom RTL system to the Zynq PS, AXI DMA and DDR memory through Vivado Block Design.
+**Goal:** Package each custom RTL block as a separate Vivado IP and connect the blocks visually in Vivado Block Design before preparing the AXI DMA and DDR integration.
 
-**Expected Deliverable:** Validated Block Design ready for hardware execution.
+**Expected Deliverable:** Separate custom IP blocks for data_generator, packet_builder_FSM, sync_fifo and axi_stream_master, plus a Vivado Block Design that shows the custom RTL blocks clearly and prepares the path toward AXI DMA / DDR.
 
 ## Stage 8 — Vitis C Verification
 

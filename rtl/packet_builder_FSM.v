@@ -1,4 +1,3 @@
-
 `timescale 1ns / 1ps
 
 module packet_builder_FSM #(
@@ -15,7 +14,8 @@ module packet_builder_FSM #(
 
     output reg [DATA_WIDTH-1:0] packet_word_out,
     output reg packet_valid,
-    output reg packet_done
+    output reg packet_done,
+    output wire data_ready
     );
 
    
@@ -30,6 +30,8 @@ module packet_builder_FSM #(
     parameter SEND_DATA = 3'd3;
     parameter SEND_CHECKSUM = 3'd4;
     parameter DONE = 3'd5;
+
+    assign data_ready = (state == SEND_DATA);
 
     always@ (posedge clk)
     begin
@@ -153,25 +155,4 @@ module packet_builder_FSM #(
         end
     end
 
-
-
-
-
-    
-
-    
-
-
-
-              
-
-    
-        
-
-
-
-
-
-
-
- endmodule
+endmodule
