@@ -1,0 +1,21 @@
+{
+	"version": "1.0",
+	"modules": {
+		"data_project_bd": {
+			"proto_instances": {
+				"/axi_stream_master_0/axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "clk"},
+						"ARESETN": { "actual": "rst"},
+						"TDATA": { "actual": "axis_tdata"},
+						"TKEEP": { "actual": "axis_tkeep"},
+						"TLAST": { "actual": "axis_tlast"},
+						"TREADY": { "actual": "axis_tready"},
+						"TVALID": { "actual": "axis_tvalid"}
+					}
+				}
+			}
+		}
+	}
+}

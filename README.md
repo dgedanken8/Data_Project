@@ -139,7 +139,15 @@ This helps isolate bugs and follows a professional FPGA development flow.
 
 ---
 
-### 4. AXI-Stream and AXI DMA Integration
+### 4. Custom IP Packaging and Block Design
+
+The verified RTL blocks are packaged as separate Vivado custom IP blocks.
+
+This makes the system architecture visible in Vivado Block Design and allows each block to be explained independently during portfolio review or interviews.
+
+---
+
+### 5. AXI-Stream and AXI DMA Integration
 
 The custom RTL logic will communicate with AXI DMA using AXI-Stream.
 
@@ -147,7 +155,7 @@ AXI DMA is used to transfer data from the programmable logic into DDR memory eff
 
 ---
 
-### 5. DDR and Software Verification
+### 6. DDR and Software Verification
 
 The final packet will be stored in DDR memory.
 
@@ -161,7 +169,7 @@ A Vitis C program will read the DDR buffer and verify:
 
 ---
 
-### 6. Clock Domain Crossing
+### 7. Clock Domain Crossing
 
 After the basic DMA and DDR flow works, the design will be extended with an Async FIFO for safe Clock Domain Crossing.
 
@@ -228,17 +236,18 @@ The project is developed according to the following stages:
 | 5 | AXI-Stream Master + Testbench |
 | 6 | Full RTL Integration Simulation |
 | 7 | Custom IP Packaging + Vivado Block Design |
-| 8 | Vitis C Verification |
-| 9 | Async FIFO + CDC + Testbench |
-| 10 | Full Integration with CDC + DMA + DDR |
-| 11 | ILA + Vivado Reports |
-| 12 | Python CSV / Graph |
-| 13 | UART or SPI Extension |
-| 14 | Portfolio Polish |
+| 8 | AXI DMA + Zynq PS + DDR Hardware Integration |
+| 9 | Vitis C Verification |
+| 10 | Async FIFO + CDC + Testbench |
+| 11 | Full Integration with CDC + DMA + DDR |
+| 12 | ILA + Vivado Reports |
+| 13 | Python CSV / Graph |
+| 14 | UART or SPI Extension |
+| 15 | Portfolio Polish |
 
 For progress tracking, see the project checklist in the documentation folder.
 
-Current progress: Stages 0-6 are complete. The next stage is Stage 7 - Custom IP Packaging + Vivado Block Design.
+Current progress: Stages 0-7 are complete. The next stage is Stage 8 - AXI DMA + Zynq PS + DDR Hardware Integration.
 
 ---
 
@@ -248,6 +257,7 @@ Current progress: Stages 0-6 are complete. The next stage is Stage 7 - Custom IP
 Data_Project/
 ├── docs/       Project documentation, work plan, checklist and protocol
 ├── images/     Block diagrams, waveforms and screenshots
+├── ip_repo/    Vivado custom IP repository
 ├── python/     Python scripts for CSV and graphs
 ├── reports/    Timing, utilization and simulation reports
 ├── rtl/        Verilog RTL source files
@@ -266,9 +276,10 @@ Main documentation files:
 - **Work Plan:** `docs/work_plan.md`
 - **Data Protocol:** `docs/data_protocol.md`
 - **Project Checklist:** `docs/project_checklist.md`
-- **Hebrew Checklist PDF:** `docs/Data_Project_Checklist_HE.pdf`
+- **Hebrew Checklist PDF:** `docs/data_project_checklist_hebrew.pdf`
+- **English Checklist PDF:** `docs/data_project_checklist_english.pdf`
 - **Block Diagram:** `images/data_project_block_diagram.png`
-- **Full Project Plan:** `docs/תוכנית עבודה.pdf`
+- **Full Project Plan:** `docs/work_plan_he.pdf`
 
 ---
 
@@ -284,9 +295,13 @@ Each RTL block will be tested separately using a dedicated testbench.
 
 The full custom RTL chain is simulated using an integration testbench before connecting it to Vivado Block Design, AXI DMA and DDR.
 
+### Vivado Custom IP and Block Design
+
+Each verified RTL block is packaged as a separate Vivado custom IP. The custom IP blocks are connected in Block Design, validated, wrapped with an HDL wrapper and synthesized.
+
 ### Vivado Hardware Integration
 
-The RTL design will be connected to Zynq PS, AXI DMA, and DDR using Vivado Block Design.
+The custom AXI-Stream output will be connected to Zynq PS, AXI DMA, and DDR using Vivado Block Design.
 
 ### Vitis C Verification
 
@@ -313,6 +328,8 @@ The project is intended to show the ability to:
 - Build FSM-based control logic
 - Use FIFO buffering
 - Work with AXI-Stream
+- Package RTL as Vivado custom IP
+- Build and validate Vivado Block Design
 - Integrate AXI DMA and DDR
 - Write Vitis C verification software
 - Handle Clock Domain Crossing

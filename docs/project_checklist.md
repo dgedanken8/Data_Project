@@ -13,16 +13,17 @@ Progress tracking for the DDR Data Logger project on Zybo Z7-20.
 | 4 | Sync FIFO + Testbench | ✓ Done | sync_fifo.v + testbench + simulation |
 | 5 | AXI-Stream Master + Testbench | ✓ Done | axis_stream_master.v + testbench + simulation |
 | 6 | Full RTL Integration Simulation | ✓ Done | tb/tb_data_project_integration.v + full RTL integration simulation + waveform + console PASS |
-| 7 | Custom IP Packaging + Vivado Block Design | □ Pending | Separate custom IP blocks and visual Block Design prepared for AXI DMA / DDR |
-| 8 | Vitis C Verification | □ Pending | C software that starts DMA and verifies DDR data |
-| 9 | Async FIFO + CDC + Testbench | □ Pending | async_fifo.v + testbench with two clocks |
-| 10 | Full Integration with CDC + DMA + DDR | □ Pending | Full system with two clock domains and DDR |
-| 11 | ILA + Vivado Reports | □ Pending | ILA, timing report, utilization report |
-| 12 | Python CSV / Graph | □ Pending | CSV, graph, and documentation |
-| 13 | UART or SPI Extension | □ Pending | Real data source replacing Data Generator |
-| 14 | Portfolio Polish | □ Pending | GitHub, README, images, explanations, and reports polish |
+| 7 | Custom IP Packaging + Vivado Block Design | ✓ Done | Custom IP blocks, validated Block Design, HDL wrapper, synthesis, utilization/schematic reports, commit and push |
+| 8 | AXI DMA + Zynq PS + DDR Hardware Integration | □ Pending | Vivado design with Zynq PS, AXI DMA, DDR path, bitstream and exported XSA |
+| 9 | Vitis C Verification | □ Pending | C software that starts DMA and verifies DDR packet data |
+| 10 | Async FIFO + CDC + Testbench | □ Pending | async_fifo.v + testbench with two clocks |
+| 11 | Full Integration with CDC + DMA + DDR | □ Pending | Full system with CDC, DMA and DDR |
+| 12 | ILA + Vivado Reports | □ Pending | ILA, timing report, utilization report and screenshots |
+| 13 | Python CSV / Graph | □ Pending | CSV, graph, and documentation |
+| 14 | UART or SPI Extension | □ Pending | Real data source replacing Data Generator |
+| 15 | Portfolio Polish | □ Pending | GitHub, README, images, explanations, reports and final polish |
 
-Current status: Stages 0-6 are complete. The next stage is Stage 7 - Custom IP Packaging + Vivado Block Design.
+Current status: Stages 0-7 are complete. The next stage is Stage 8 - AXI DMA + Zynq PS + DDR Hardware Integration.
 
 ---
 
@@ -110,77 +111,116 @@ Current status: Stages 0-6 are complete. The next stage is Stage 7 - Custom IP P
 - ☑ Complete commit
 - ☑ Complete push
 
-### Stage 7 - Custom IP Packaging + Vivado Block Design - □ Pending
+### Stage 7 - Custom IP Packaging + Vivado Block Design - ✓ Done
 
-- ☐ Package data_generator as IP
-- ☐ Package packet_builder_FSM as IP
-- ☐ Package sync_fifo as IP
-- ☐ Package axi_stream_master as IP
-- ☐ Add custom IP repository
-- ☐ Create Block Design
-- ☐ Connect custom IP blocks visually
-- ☐ Prepare AXI DMA / DDR integration
+- ☑ Package data_generator as IP
+- ☑ Package packet_builder_FSM as IP
+- ☑ Package sync_fifo as IP
+- ☑ Package axi_stream_master as IP
+- ☑ Add custom IP repository
+- ☑ Create Block Design
+- ☑ Connect custom IP blocks visually
+- ☑ Validate Block Design
+- ☑ Generate Output Products
+- ☑ Create HDL Wrapper
+- ☑ Run Synthesis
+- ☑ Save utilization report
+- ☑ Review synthesized schematic
+- ☑ Prepare AXI DMA / DDR integration plan
+- ☑ Complete commit
+- ☑ Complete push
+
+### Stage 8 - AXI DMA + Zynq PS + DDR Hardware Integration - □ Pending
+
+- ☐ Add Zynq Processing System
+- ☐ Run Block Automation for Zynq PS
+- ☐ Add AXI DMA
+- ☐ Connect axi_stream_master m_axis to AXI DMA S_AXIS_S2MM
+- ☐ Connect AXI DMA S_AXI_LITE control interface to Zynq PS
+- ☐ Connect AXI DMA M_AXI_S2MM to Zynq HP port / DDR path
+- ☐ Configure clocks and resets
+- ☐ Configure Address Editor
+- ☐ Validate Design
+- ☐ Generate Bitstream
+- ☐ Export Hardware XSA
 - ☐ Complete commit
 - ☐ Complete push
 
-### Stage 8 - Vitis C Verification - □ Pending
+### Stage 9 - Vitis C Verification - □ Pending
 
-- ☐ Create Vitis project
-- ☐ Write DMA initialization code
+- ☐ Create Vitis platform from exported XSA
+- ☐ Create Vitis C application
+- ☐ Initialize AXI DMA
 - ☐ Define DDR buffer address
-- ☐ Start DMA transfer
-- ☐ Read data from DDR
+- ☐ Start S2MM DMA transfer
+- ☐ Wait for DMA completion
+- ☐ Read packet words from DDR
 - ☐ Verify Header / Length / Data / Checksum
+- ☐ Print PASS / FAIL to terminal
 - ☐ Complete commit
 - ☐ Complete push
 
-### Stage 9 - Async FIFO + CDC + Testbench - □ Pending
+### Stage 10 - Async FIFO + CDC + Testbench - □ Pending
 
+- ☐ Study CDC concept
 - ☐ Write rtl/async_fifo.v
 - ☐ Write tb/tb_async_fifo.v
-- ☐ Verify two clocks
+- ☐ Verify two independent clocks
 - ☐ Verify correct data crossing
+- ☐ Verify full/empty behavior
+- ☐ Save waveform screenshot
 - ☐ Complete commit
 - ☐ Complete push
 
-### Stage 10 - Full Integration with CDC + DMA + DDR - □ Pending
+### Stage 11 - Full Integration with CDC + DMA + DDR - □ Pending
 
-- ☐ Integrate Async FIFO into the system
+- ☐ Package async_fifo as Custom IP
+- ☐ Add async_fifo to Block Design
+- ☐ Integrate Async FIFO into the full system
+- ☐ Connect two clock domains
 - ☐ Update full integration
-- ☐ Verify two clock domains
-- ☐ Verify DDR write
+- ☐ Validate Design
+- ☐ Run Synthesis
+- ☐ Run Implementation
+- ☐ Generate Bitstream
+- ☐ Export updated XSA
+- ☐ Verify DDR write again
 - ☐ Complete commit
 - ☐ Complete push
 
-### Stage 11 - ILA + Vivado Reports - □ Pending
+### Stage 12 - ILA + Vivado Reports - □ Pending
 
 - ☐ Add ILA
-- ☐ Verify key signals
+- ☐ Probe key signals
+- ☐ Capture AXI-Stream handshake
+- ☐ Save ILA screenshots
 - ☐ Save timing report
 - ☐ Save utilization report
 - ☐ Save screenshots
 - ☐ Complete commit
 - ☐ Complete push
 
-### Stage 12 - Python CSV / Graph - □ Pending
+### Stage 13 - Python CSV / Graph - □ Pending
 
 - ☐ Create CSV file
 - ☐ Write Python script
+- ☐ Read CSV data
 - ☐ Create graph
 - ☐ Save screenshot / output
 - ☐ Complete commit
 - ☐ Complete push
 
-### Stage 13 - UART or SPI Extension - □ Pending
+### Stage 14 - UART or SPI Extension - □ Pending
 
 - ☐ Choose UART or SPI
 - ☐ Write communication block
 - ☐ Run verification
+- ☐ Connect receiver instead of Data Generator
 - ☐ Receive real data through the system
 - ☐ Complete commit
 - ☐ Complete push
 
-### Stage 14 - Portfolio Polish - □ Pending
+### Stage 15 - Portfolio Polish - □ Pending
 
 - ☐ Update README
 - ☐ Add images
@@ -189,3 +229,5 @@ Current status: Stages 0-6 are complete. The next stage is Stage 7 - Custom IP P
 - ☐ Add explanations for each block
 - ☐ Add Future Work / Lessons Learned
 - ☐ Prepare project for presentation
+- ☐ Complete final commit
+- ☐ Complete final push
