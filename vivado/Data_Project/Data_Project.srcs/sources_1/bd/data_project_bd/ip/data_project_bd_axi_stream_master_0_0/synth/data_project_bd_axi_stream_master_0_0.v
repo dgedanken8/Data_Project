@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:axi_stream_master:1.0
-// IP Revision: 2
+// IP Revision: 3
 
 (* X_CORE_INFO = "axi_stream_master,Vivado 2019.1" *)
 (* CHECK_LICENSE_TYPE = "data_project_bd_axi_stream_master_0_0,axi_stream_master,{}" *)
-(* CORE_GENERATION_INFO = "data_project_bd_axi_stream_master_0_0,axi_stream_master,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=axi_stream_master,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DATA_WIDTH=32,PACKET_WORDS=9}" *)
+(* CORE_GENERATION_INFO = "data_project_bd_axi_stream_master_0_0,axi_stream_master,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=axi_stream_master,x_ipVersion=1.0,x_ipCoreRevision=3,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DATA_WIDTH=32,PACKET_WORDS=9}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module data_project_bd_axi_stream_master_0_0 (
@@ -72,10 +72,10 @@ module data_project_bd_axi_stream_master_0_0 (
   debug_state
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF axis, ASSOCIATED_RESET rst, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN data_project_bd_clk_0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF axis, ASSOCIATED_RESET rst, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN data_project_bd_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
 input wire rst;
 input wire start;
@@ -90,7 +90,7 @@ output wire [31 : 0] axis_tdata;
 output wire axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 axis TLAST" *)
 output wire axis_tlast;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axis, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN data_project_bd_clk_0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axis, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN data_project_bd_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 axis TKEEP" *)
 output wire [3 : 0] axis_tkeep;
 output wire busy;

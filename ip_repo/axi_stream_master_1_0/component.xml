@@ -425,8 +425,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>axi_stream_master_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-07-09T18:39:43Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>3</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-07-21T20:23:08Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@654d1a1e_ARCHIVE_LOCATION">c:/Users/dgeda/FPGA/Data_Project/ip_repo/axi_stream_master_1_0</xilinx:tag>
@@ -434,6 +434,12 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7fab5968_ARCHIVE_LOCATION">c:/Users/dgeda/FPGA/Data_Project/ip_repo/axi_stream_master_1_0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2d67650f_ARCHIVE_LOCATION">c:/Users/dgeda/FPGA/Data_Project/ip_repo/axi_stream_master_1_0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@1f664fa9_ARCHIVE_LOCATION">c:/Users/dgeda/FPGA/Data_Project/ip_repo/axi_stream_master_1_0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c26fdd_ARCHIVE_LOCATION">c:/Users/dgeda/FPGA/Data_Project/ip_repo/axi_stream_master_1_0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27f05be6_ARCHIVE_LOCATION">c:/Users/dgeda/FPGA/Data_Project/ip_repo/axi_stream_master_1_0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2865157c_ARCHIVE_LOCATION">c:/Users/dgeda/FPGA/Data_Project/ip_repo/axi_stream_master_1_0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b0d3e00_ARCHIVE_LOCATION">c:/Users/dgeda/FPGA/Data_Project/ip_repo/axi_stream_master_1_0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7879025c_ARCHIVE_LOCATION">c:/Users/dgeda/FPGA/Data_Project/ip_repo/axi_stream_master_1_0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2aef05fd_ARCHIVE_LOCATION">c:/Users/dgeda/FPGA/Data_Project/ip_repo/axi_stream_master_1_0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
