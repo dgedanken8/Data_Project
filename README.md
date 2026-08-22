@@ -7,7 +7,7 @@
 ![Status](https://img.shields.io/badge/Status-In%20Development-yellow)
 
 > **Data Project** is a step-by-step FPGA / SoC project implemented on the **Zybo Z7-20** board.  
-> The project demonstrates a complete data path from custom Verilog RTL, through packet generation, FIFO buffering, AXI-Stream, AXI DMA, DDR memory, and software verification using Vitis C.
+> The project demonstrates a complete data path from custom Verilog RTL, through packet generation, FIFO buffering, AXI-Stream, AXI DMA, DDR memory, and software verification using SDK.
 
 ---
 
@@ -45,7 +45,7 @@ This project is designed as a professional portfolio project that demonstrates b
 * **FPGA / SoC:** Xilinx Zynq-7000
 * **Hardware Design Tool:** Vivado
 * **Hardware Description Language:** Verilog HDL
-* **Software Tool:** Vitis C
+* **Software Tool:** SDK
 * **Version Control:** Git / GitHub
 * **Future Data Analysis:** Python / CSV / Graph
 
@@ -76,8 +76,6 @@ Data Generator / Communication Receiver
 Packet Builder FSM
         ↓
 Sync FIFO
-        ↓
-Async FIFO / CDC
         ↓
 AXI-Stream Master
         ↓
@@ -237,7 +235,7 @@ The project is developed according to the following stages:
 | 6 | Full RTL Integration Simulation |
 | 7 | Custom IP Packaging + Vivado Block Design |
 | 8 | AXI DMA + Zynq PS + DDR Hardware Integration |
-| 9 | Vitis C Verification |
+| 9 | SDK Verification |
 | 10 | Async FIFO + CDC + Testbench |
 | 11 | Full Integration with CDC + DMA + DDR |
 | 12 | ILA + Vivado Reports |
@@ -262,7 +260,7 @@ Data_Project/
 ├── reports/    Timing, utilization and simulation reports
 ├── rtl/        Verilog RTL source files
 ├── tb/         Testbench files
-├── vitis/      Vitis C software
+├── SDK/        SDK software
 ├── vivado/     Vivado project files and block design notes
 └── README.md
 ```
@@ -303,7 +301,7 @@ Each verified RTL block is packaged as a separate Vivado custom IP. The custom I
 
 The custom AXI-Stream output will be connected to Zynq PS, AXI DMA, and DDR using Vivado Block Design.
 
-### Vitis C Verification
+### SDK Verification
 
 A C program will control the DMA, read the DDR buffer, and verify the received packet.
 
@@ -331,7 +329,7 @@ The project is intended to show the ability to:
 - Package RTL as Vivado custom IP
 - Build and validate Vivado Block Design
 - Integrate AXI DMA and DDR
-- Write Vitis C verification software
+- Write SDK verification software
 - Handle Clock Domain Crossing
 - Use ILA for hardware debugging
 - Document a project professionally on GitHub

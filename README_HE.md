@@ -45,7 +45,7 @@
 * **FPGA / SoC:** Xilinx Zynq-7000
 * **Hardware Design Tool:** Vivado
 * **Hardware Description Language:** Verilog HDL
-* **Software Tool:** Vitis C
+* **Software Tool:** SDK
 * **Version Control:** Git / GitHub
 * **Future Data Analysis:** Python / CSV / Graph
 
@@ -85,7 +85,7 @@ AXI DMA
         ↓
 DDR Memory
         ↓
-Vitis C Verification
+SDK Verification
         ↓
 UART Terminal / Python / CSV / Graph
 ```
@@ -180,7 +180,7 @@ AXI DMA מאפשר להעביר את הנתונים מה-Programmable Logic לז
 
 לאחר השלמת אינטגרציית ה-AXI DMA וה-DDR, ה-Packet יישמר בזיכרון DDR.
 
-תוכנית Vitis C תקרא את ה-DDR buffer ותאמת:
+תוכנית SDK תקרא את ה-DDR buffer ותאמת:
 
 * Header
 * Length
@@ -258,7 +258,7 @@ docs/data_protocol.md
 |     6 | Full RTL Integration Simulation              |     ✅ Done     |
 |     7 | Custom IP Packaging + Vivado Block Design    |     ✅ Done     |
 |     8 | AXI DMA + Zynq PS + DDR Hardware Integration | 🔧 In Progress |
-|     9 | Vitis C Verification                         |    ⏳ Planned   |
+|     9 | SDK Verification                             |    ⏳ Planned   |
 |    10 | Async FIFO + CDC + Testbench                 |    ⏳ Planned   |
 |    11 | Full Integration with CDC + DMA + DDR        |    ⏳ Planned   |
 |    12 | ILA + Vivado Reports                         |    ⏳ Planned   |
@@ -284,7 +284,7 @@ Data_Project/
 ├── reports/    Timing, utilization and simulation reports
 ├── rtl/        Verilog RTL source files
 ├── tb/         Testbench files
-├── vitis/      Vitis C software
+├── SDK/         SDK software
 ├── vivado/     Vivado project files and block design notes
 └── README.md
 ```
@@ -356,7 +356,7 @@ AXI-Stream Master
 
 ה-Custom AXI-Stream output משולב עם Zynq PS, AXI DMA וזיכרון DDR ב-Vivado לצורך Hardware Integration ו-Bring-Up על כרטיס ה-Zybo Z7-20.
 
-### Vitis C Verification
+### SDK Verification
 
 לאחר השלמת אינטגרציית החומרה, תוכנית C תשלוט ב-DMA, תקרא את ה-DDR buffer ותאמת את ה-Packet שהתקבל.
 
@@ -384,7 +384,7 @@ Python ישמש בהמשך לייצוא נתונים, יצירת CSV והפקת 
 * Packaging של RTL כ-Vivado Custom IP
 * בנייה ואימות של Vivado Block Design
 * אינטגרציה עם AXI DMA ו-DDR
-* כתיבת Vitis C verification software
+* כתיבת SDK verification software
 * עבודה עם Clock Domain Crossing
 * שימוש ב-ILA לצורך Hardware Debug
 * תיעוד וניהול פרויקט בצורה מסודרת באמצעות Git / GitHub
