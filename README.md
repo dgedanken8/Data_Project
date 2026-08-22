@@ -83,7 +83,7 @@ AXI DMA
         ↓
 DDR Memory
         ↓
-Vitis C Verification
+SDK Verification
         ↓
 UART Terminal / Python / CSV / Graph
 ```

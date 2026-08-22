@@ -77,8 +77,6 @@ Packet Builder FSM
         ↓
 Sync FIFO
         ↓
-Async FIFO / CDC
-        ↓
 AXI-Stream Master
         ↓
 AXI DMA
